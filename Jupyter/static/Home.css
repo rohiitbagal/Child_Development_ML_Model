@@ -1,0 +1,94 @@
+/* Reset some default styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif; /* Use a clean font */
+  line-height: 1.6; /* Improve line spacing */
+  background-color: #f9f9f9; /* Light background color */
+  color: #333; /* Dark text color for contrast */
+}
+
+/* Navigation bar styles */
+nav {
+  background-color: #007bff; /* Blue background for navbar */
+  padding: 15px; /* Padding around the nav */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+nav ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Center the items */
+}
+
+nav li {
+  margin: 0 15px; /* Spacing between items */
+}
+
+nav a {
+  color: white; /* White text color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px; /* Add padding for better click area */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth background color and transform */
+}
+
+nav a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Header styles */
+header {
+  text-align: center; /* Center-align text */
+  padding: 50px 20px; /* Padding for header */
+  background-color: #e9ecef; /* Light gray background */
+  border-bottom: 2px solid #007bff; /* Blue border at the bottom */
+}
+
+header h1 {
+  font-size: 2.5em; /* Larger font size for the title */
+  color: #007bff; /* Blue text for the title */
+}
+
+header p {
+  font-size: 1.2em; /* Slightly larger font for the intro */
+}
+
+/* Section styles */
+section {
+  max-width: 800px; /* Limit width for readability */
+  margin: 20px auto; /* Center the section */
+  padding: 20px; /* Padding around the content */
+  background: white; /* White background for sections */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+section h2 {
+  color: #007bff; /* Blue color for section headings */
+  margin-bottom: 15px; /* Space below headings */
+}
+
+/* Image styles */
+img {
+  display: block; /* Make images block elements */
+  margin: 20px auto; /* Center images */
+  border-radius: 10px; /* Rounded corners for images */
+  max-width: 100%; /* Responsive images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Footer styles */
+footer {
+  text-align: center; /* Center-align text */
+  padding: 15px; /* Padding for footer */
+  background-color: #007bff; /* Blue background for footer */
+  color: white; /* White text color */
+  position: relative; /* Relative positioning */
+  bottom: 0; /* Align to bottom */
+  width: 100%; /* Full width */
+  margin-top: 20px; /* Space above footer */
+}

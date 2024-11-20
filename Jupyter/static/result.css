@@ -1,0 +1,145 @@
+/* Reset some basic elements */
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Overall page styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Navigation styles */
+nav {
+  background: #007bff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background: #0056b3;
+}
+
+/* Header styles */
+h1 {
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Main content styles */
+h2 {
+  margin-top: 20px;
+  color: #007bff;
+}
+
+h3 {
+  margin-top: 15px;
+  color: #0056b3;
+}
+
+/* Suggestions lists */
+ul {
+  list-style: square inside;
+  margin-left: 20px;
+}
+
+/* Link styles */
+a {
+  display: inline-block;
+  margin-top: 20px;
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+a:hover {
+  background: #0056b3;
+}
+
+/* Footer styles */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 10px 0;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Social links */
+.social-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Add a photo section */
+.photo-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.photo-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+#download-suggestions {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+#download-suggestions:hover {
+  background-color: #45a049;
+}

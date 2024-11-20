@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Prediction Result</title>
+    <link rel="stylesheet" href="./static/result.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/static/Home.html">Home</a>
+        </li>
+        <li><a href="/static/About.html">About</a></li>
+        <li><a href="/">Model</a></li>
+        <li><a href="/static/Member.html">Member</a></li>
+      </ul>
+    </nav>
+
+    <h1>Prediction Result</h1>
+
+    <div class="photo-container">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTggcmlEMvgFqFhPLFW2suy8nzyDF8fCj8bIj6RYEMJCoDLAC1tJ-qa7ZQldDAEA9e2UhY&usqp=CAU"
+        alt="BMI Result Image"
+      />
+    </div>
+
+    <p>
+      The BMI Category for the entered data is:
+      <strong>{{ prediction }}</strong>
+    </p>
+
+    <h3>Suggestions for {{ prediction }} :</h3>
+    <ul id="bmi-suggestions">
+      {% for suggestion in bmi_suggestions %}
+      <li>{{ suggestion }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Height Suggestions:</h3>
+    <ul id="height-suggestions">
+      {% for suggestion in height_suggestion %}
+      <li>{{ suggestion }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Activity Suggestions:</h3>
+    <ul id="activity-suggestions">
+      {% for suggestion in activity_suggestions %}
+      <li>{{ suggestion }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Emotion Well-being Suggestions:</h3>
+    <!-- <ul id="emotion-suggestions">
+      {% for suggestion in emotion_suggestions %}
+      <li>{{ suggestion }}</li>
+      {% endfor %}
+    </ul> -->
+    <ul id="emotion-suggestions">
+      <li>
+        Building a support network of friends or classmates to discuss academic
+        pressures or personal issues is essential.
+      </li>
+      <li>
+        Regularly talk to loved ones. Sharing your experiences can help release
+        stress and get emotional support.
+      </li>
+      <li>
+        Engage in activities that require focus, such as drawing or solving
+        puzzles, to shift your mind away from stress.
+      </li>
+      <li>
+        If you feel overwhelmed, don't hesitate to talk to a counselor or mental
+        health professional.
+      </li>
+    </ul>
+
+    <h3>Social Interaction Suggestions:</h3>
+    <u1 id="social-interaction-suggestions">
+      <li>
+        Arrange playdates with classmates or neighborhood friends to help them
+        learn how to socialize in informal settings
+      </li>
+      <li>
+        Participating in community service projects helps teens develop empathy
+        and make new friends while contributing positively to their community.
+      </li>
+      <li>
+        Encourage kids to express themselves and listen to others, helping them
+        build confidence in communicating.
+      </li>
+    </u1>
+    <!-- <ul id="social-interaction-suggestions">
+      {% for suggestion in social_interaction_suggestions %}
+      <li>{{ suggestion }}</li>
+      {% endfor %}
+    </ul> -->
+
+    <h3>Cognitive Milestones Suggestions:</h3>
+    <!-- <ul id="cognitive-milestones-suggestions">
+      {% for suggestion in cognitive_milestones_suggestions %}
+      <li>{{ suggestion }}</li>
+      {% endfor %}
+    </ul> -->
+    <ul id="cognitive-milestones-suggestions">
+      <li>
+        Always seek to understand the "why" and "how" behind concepts rather
+        than just memorizing them. This deepens understanding.
+      </li>
+      <li>
+        In your coursework, analyze real-world case studies to strengthen
+        problem-solving and decision-making abilities.
+      </li>
+      <li>
+        After learning something new, try to summarize it in your own words.
+        This helps reinforce the information and improves retention.
+      </li>
+      <li>
+        Regularly engage in puzzles, logic games, or brainteasers that challenge
+        your cognitive abilities.
+      </li>
+    </ul>
+
+    <h3>Mental Health Suggestions:</h3>
+    <ul id="mental-health-suggestions">
+      {% for suggestion in mental_health_suggestions %}
+      <li>{{ suggestion }}</li>
+      {% endfor %}
+    </ul>
+
+    <button id="download-suggestions">Download Suggestions</button>
+
+    <a href="/">Predict Again</a>
+
+    <footer>
+      <p>&copy; 2024 Child Development Project. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#">Facebook</a> | <a href="#">Twitter</a> |
+        <a href="#">Instagram</a>
+      </div>
+    </footer>
+    <script>
+      document
+        .getElementById("download-suggestions")
+        .addEventListener("click", function () {
+          // Function to extract text from a given list by ID
+          function getSuggestionsFromList(listId) {
+            const listItems = document.querySelectorAll(`#${listId} li`);
+            let suggestions = "";
+            listItems.forEach((item, index) => {
+              suggestions += `${index + 1}. ${item.innerText}\n`;
+            });
+            return suggestions;
+          }
+
+          // Get all suggestions from the different sections
+          const bmiSuggestions = getSuggestionsFromList("bmi-suggestions");
+          const heightSuggestions =
+            getSuggestionsFromList("height-suggestions");
+          const activitySuggestions = getSuggestionsFromList(
+            "activity-suggestions"
+          );
+
+          const emotionSuggestions = getSuggestionsFromList(
+            "emotion-suggestions"
+          );
+          const socialInteractionSuggestions = getSuggestionsFromList(
+            "social-interaction-suggestions"
+          );
+          const cognitiveMilestonesSuggestions = getSuggestionsFromList(
+            "cognitive-milestones-suggestions"
+          );
+          const mentalHealthSuggestions = getSuggestionsFromList(
+            "mental-health-suggestions"
+          );
+
+          // Create file content
+          let fileContent = `BMI Suggestions:\n${bmiSuggestions}\n\n`;
+          fileContent += `Height Suggestions:\n${heightSuggestions}\n\n`;
+          fileContent += `Activity Suggestions:\n${activitySuggestions}\n\n`;
+
+          fileContent += `Emotion Well-being Suggestions:\n${emotionSuggestions}\n\n`;
+          fileContent += `Social Interaction Suggestions:\n${socialInteractionSuggestions}\n\n`;
+          fileContent += `Cognitive Milestones Suggestions:\n${cognitiveMilestonesSuggestions}\n\n`;
+          fileContent += `Mental Health Suggestions:\n${mentalHealthSuggestions}\n\n`;
+
+          // Create a blob with the content
+          const blob = new Blob([fileContent], { type: "text/plain" });
+
+          // Create a link element
+          const link = document.createElement("a");
+          link.href = URL.createObjectURL(blob);
+          link.download = "suggestions.txt";
+
+          // Trigger download
+          link.click();
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+/* Reset some default styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9; /* Light background color */
+  color: #333; /* Dark text color for contrast */
+}
+
+/* Navigation bar styles */
+nav {
+  background-color: #007bff; /* Blue background for navbar */
+  padding: 15px; /* Padding around the nav */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+nav ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Center the items */
+}
+
+nav li {
+  margin: 0 15px; /* Spacing between items */
+}
+
+nav a {
+  color: white; /* White text color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px; /* Add padding for better click area */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth background color and transform */
+}
+
+nav a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Form styles */
+form {
+  max-width: 600px; /* Limit form width */
+  margin: 20px auto; /* Center the form */
+  padding: 20px; /* Padding for form */
+  background: white; /* White background for form */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+h1 {
+  text-align: center; /* Center-align the title */
+  color: #007bff; /* Blue color for the title */
+}
+
+label {
+  font-weight: bold; /* Bold labels for better readability */
+}
+
+input[type="number"],
+select {
+  width: calc(100% - 20px); /* Full width input with padding */
+  padding: 10px; /* Padding for inputs */
+  margin: 10px 0; /* Spacing between inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+input[type="submit"] {
+  background-color: #007bff; /* Blue submit button */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color */
+  display: block; /* Block display for centering */
+  margin: 20px auto; /* Center the submit button */
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Image styles */
+.img-container {
+  text-align: center; /* Center the images */
+  margin: 20px 0; /* Margin around the images */
+}
+
+img {
+  max-width: 100%; /* Responsive images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Footer styles */
+footer {
+  text-align: center; /* Center-align text */
+  padding: 15px; /* Padding for footer */
+  background-color: #007bff; /* Blue background for footer */
+  color: white; /* White text color */
+  position: relative; /* Relative positioning */
+  bottom: 0; /* Align to bottom */
+  width: 100%; /* Full width */
+  margin-top: 20px; /* Space above footer */
+}
+/* CSS for IQ Test Link */
+.iq-test-link {
+  margin: 20px 0; /* Space above and below the link */
+  padding: 10px; /* Padding around the link */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+  text-align: center; /* Center align the text */
+}
+
+.iq-test-link p {
+  font-weight: bold; /* Bold text for the prompt */
+  margin: 0 0 5px 0; /* Space below the paragraph */
+}
+
+.iq-test-link a {
+  text-decoration: none; /* Remove underline from link */
+  color: #007bff; /* Link color */
+  font-weight: bold; /* Bold link text */
+}
+
+.iq-test-link a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
